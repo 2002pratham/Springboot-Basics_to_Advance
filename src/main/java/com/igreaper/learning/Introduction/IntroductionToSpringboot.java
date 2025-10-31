@@ -6,17 +6,18 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class IntroductionToSpringbootApplication implements CommandLineRunner {
+public class IntroductionToSpringboot implements CommandLineRunner {
+
 
     @Autowired
-    Student student;
+    CakeBaker cakeBaker;
 
 	public static void main(String[] args) {
-		SpringApplication.run(IntroductionToSpringbootApplication.class, args);
+		SpringApplication.run(IntroductionToSpringboot.class, args);
 	}
 
     @Override
     public void run(String... args) throws Exception {
-        student.intro();
+        System.out.println(cakeBaker.BakeCake());
     }
 }
